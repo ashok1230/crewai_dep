@@ -1,0 +1,23 @@
+[project]
+name = "pcavd02"
+version = "0.1.0"
+description = "pcavd02 using crewAI"
+authors = [{ name = "Ashok", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.175.0,<1.0.0"
+]
+
+[project.scripts]
+pcavd02 = "pcavd02.main:run"
+run_crew = "pcavd02.main:run"
+train = "pcavd02.main:train"
+replay = "pcavd02.main:replay"
+test = "pcavd02.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
