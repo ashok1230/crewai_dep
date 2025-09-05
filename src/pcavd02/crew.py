@@ -29,7 +29,8 @@ class Pcavd02():
             verbose=True,
             tools=[serper_dev_tool],
             max_iter=2,
-            llm="gpt-4o-mini"
+            llm="gpt-4o-mini",
+            memory=True
         )
 
     @task
@@ -46,5 +47,6 @@ class Pcavd02():
             agents=self.agents,
             tasks=self.tasks,
             process=Process.sequential,
-            verbose=True
+            verbose=True,
+            memory=True
         )

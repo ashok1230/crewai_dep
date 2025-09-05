@@ -17,13 +17,15 @@ def run():
     """
     Run the crew.
     """
-    user_query = input("Query: ")
-    inputs = {
-        "user_query": user_query
-    }
-    
     try:
-        Pcavd02().crew().kickoff(inputs=inputs)
+        while True:
+            user_query = input("Query: ")
+            inputs = {
+                "user_query": user_query
+            }
+            if user_query == "exit":
+                break
+            Pcavd02().crew().kickoff(inputs=inputs)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
